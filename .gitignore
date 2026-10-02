@@ -1,0 +1,9 @@
+dataset/
+outputs/
+__pycache__/
+*.pyc
+*.err
+*.out
+*.zip
+models/
+.ipynb_checkpoints/
