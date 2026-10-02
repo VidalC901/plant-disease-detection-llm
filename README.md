@@ -88,3 +88,23 @@ sbatch run_train.sh
 ---
 
 ## Project Structure
+final_project/
+├── scripts/
+│ ├── train_model.py # Full pipeline code
+│ └── run_train.sh # SLURM batch script
+├── dataset/ # Not tracked (too large)
+├── outputs/ # Not tracked
+└── .gitignore
+
+
+---
+
+## Feature Extraction
+
+Each image is converted to a **96-dimensional RGB color histogram**:
+- Resize to 64×64 px
+- 32-bin histogram per channel (R, G, B)
+- Normalize each histogram
+- Concatenate → 96-dim feature vector
+
+---
